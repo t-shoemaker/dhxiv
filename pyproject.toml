@@ -1,0 +1,22 @@
+[project]
+authors = [{name = "Tyler Shoemaker", email = "69219954+t-shoemaker@users.noreply.github.com"}]
+dependencies = ["sickle>=0.7.0,<0.8"]
+name = "dhxiv"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-64"]
+
+[tool.pixi.pypi-dependencies]
+dhxiv = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+python = ">=3.14.0,<3.15"
